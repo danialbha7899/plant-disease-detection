@@ -346,6 +346,11 @@ with _sec_c:
         "Use bright, even light and get close enough that the leaf fills most of the frame.</p>",
         unsafe_allow_html=True,
     )
+    st.markdown(
+        "<p style='text-align: center; color: #d1d5db; font-size: 1.02rem; margin: 0 0 0.5rem;'>"
+        "Choose a leaf photo</p>",
+        unsafe_allow_html=True,
+    )
     with st.container(border=True, key="pd_leaf_upload"):
         uploaded = st.file_uploader(
             "Upload",
