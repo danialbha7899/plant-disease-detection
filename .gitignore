@@ -1,0 +1,22 @@
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Large local artifacts (do not push ~1.5GB+ of data; use releases, Drive, or Git LFS if needed)
+train/
+valid/
+streamlit/trained_model.keras
+*.keras

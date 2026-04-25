@@ -1,0 +1,12 @@
+# Plant disease Streamlit app + notebook
+#
+# Run the app (activate the venv first):
+#   source .venv/bin/activate
+#   streamlit run streamlit/main.py
+# Copy your trained Keras file to: streamlit/trained_model.keras
+#
+streamlit>=1.28.0
+tensorflow>=2.16.0
+numpy
+pandas
+Pillow
