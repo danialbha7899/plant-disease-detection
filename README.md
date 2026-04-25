@@ -61,12 +61,12 @@ Then open the notebook from the UI.
 
 ## Deploy on Streamlit Community Cloud
 
-TensorFlow only publishes wheels for specific Python versions (e.g. 3.10–3.13). The Cloud builder **must** use a supported version.
+If build logs show **`Using Python 3.14.x`**, `pip` cannot install TensorFlow (`No matching distribution found` / *no matching Python ABI*). You **must** run the app on **Python 3.12** or **3.11** — a `runtime.txt` file in the repo is **not** what Community Cloud uses for the interpreter; the version is chosen in the **Streamlit Cloud UI** only.
 
-1. Open your app in [Streamlit Community Cloud](https://share.streamlit.io/) and use **Manage app** (or redeploy from **Create app**).
-2. Click **Advanced settings** and set **Python version** to **3.12** (or **3.11**). Do **not** use 3.14 or newer for this project until TensorFlow supports them.
-3. If you are redeploying: you may need to **delete the app and deploy again** to change the Python version (Cloud does not let you switch Python in place).
-4. Add your **`streamlit/trained_model.keras`** file to the deployment (e.g. Git LFS, a release asset, or host the file elsewhere and load by URL) — it is listed in `.gitignore` by default because of its size.
+1. In [Streamlit Community Cloud](https://share.streamlit.io/), open your app → **Settings** (⚙) (or use **Create app** / **Reboot** and expand **Advanced settings** on the deploy form).
+2. Set **Python version** to **3.12** (recommended) or **3.11**. Save.
+3. If the UI will not let you change Python, **delete the app** and create it again, selecting **3.12** in **Advanced settings** when you first deploy. ([Docs: upgrade Python on Cloud](https://docs.streamlit.io/deploy/streamlit-community-cloud/manage-your-app/upgrade-python).)
+4. Add **`streamlit/trained_model.keras`** to the app by some means (e.g. Git LFS, release download, or hosted URL) — it is in `.gitignore` by default because of size.
 
 ## Notes
 
