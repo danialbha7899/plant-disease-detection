@@ -59,6 +59,15 @@ Then open the notebook from the UI.
 | `train/`, `valid/`, `test/` | Image data folders (if you use the notebook pipeline) |
 | `requirements.txt` | Python dependencies |
 
+## Deploy on Streamlit Community Cloud
+
+TensorFlow only publishes wheels for specific Python versions (e.g. 3.10–3.13). The Cloud builder **must** use a supported version.
+
+1. Open your app in [Streamlit Community Cloud](https://share.streamlit.io/) and use **Manage app** (or redeploy from **Create app**).
+2. Click **Advanced settings** and set **Python version** to **3.12** (or **3.11**). Do **not** use 3.14 or newer for this project until TensorFlow supports them.
+3. If you are redeploying: you may need to **delete the app and deploy again** to change the Python version (Cloud does not let you switch Python in place).
+4. Add your **`streamlit/trained_model.keras`** file to the deployment (e.g. Git LFS, a release asset, or host the file elsewhere and load by URL) — it is listed in `.gitignore` by default because of its size.
+
 ## Notes
 
 - Inference runs **on your machine**; images are not sent elsewhere unless you change deployment.
