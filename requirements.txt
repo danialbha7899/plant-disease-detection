@@ -9,7 +9,7 @@
 # settings” dialog. TensorFlow has no wheels for 3.14+ yet, so 3.14 will fail
 # to resolve dependencies.
 streamlit>=1.28.0
-tensorflow>=2.16,<2.22
+tensorflow>=2.13
 numpy
 pandas
 Pillow
