@@ -18,5 +18,5 @@ __pycache__/
 # Large local artifacts (do not push ~1.5GB+ of data; use releases, Drive, or Git LFS if needed)
 train/
 valid/
-streamlit/trained_model.keras
-*.keras
+test/
+
