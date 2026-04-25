@@ -347,11 +347,6 @@ with _sec_c:
         unsafe_allow_html=True,
     )
     with st.container(border=True, key="pd_leaf_upload"):
-        st.markdown(
-            "<p style='text-align: center; color: #d1d5db; font-size: 1.02rem; margin: 0 0 0.6rem;'>"
-            "Choose a leaf photo</p>",
-            unsafe_allow_html=True,
-        )
         uploaded = st.file_uploader(
             "Upload",
             type=["png", "jpg", "jpeg", "webp"],
